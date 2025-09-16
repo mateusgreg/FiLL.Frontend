@@ -48,7 +48,7 @@ const transferSteps: TransferStep[] = [
   {
     id: '3',
     title: 'Vehicle Payment',
-    description: 'Payment processing via Stellar. See more.',
+    description: 'Payment processing via Stellar.',
     status: 'active',
   },
   {
@@ -131,7 +131,7 @@ const ProgressStep: React.FC<{ step: TransferStep; isLast: boolean }> = ({
           {step.title}
         </h3>
         <p className="text-sm text-muted-foreground leading-relaxed">
-          {step.description}
+          {step.description} {step.id == '3' && (<a href='#' className='underline'>View on Stellar Expert</a>)}
         </p>
         <p>
           <span className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
