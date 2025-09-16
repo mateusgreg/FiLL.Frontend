@@ -4,7 +4,7 @@ import MetricCard from "../components/MetricCard";
 import VehicleOperations from "../components/VehicleOperations";
 import carIcon from "../assets/car-icon.png";
 import timerIcon from "../assets/timer-icon.png";
-import failIcon from "../assets/failed-transfer-icon.png";
+import stopIcon from "../assets/stop-icon.jpg";
 
 const Dashboard = () => {
   const [timer, setTimer] = useState({ hours: 38, minutes: 43, seconds: 17 });
@@ -68,7 +68,7 @@ const Dashboard = () => {
           <MetricCard
             title="Failed Transfers"
             value="20"
-            icon={<img src={failIcon} alt="Timer" className="w-36 h-36" />}
+            icon={<img src={stopIcon} alt="Timer" className="w-36 h-36" />}
           />
         </div>
 
