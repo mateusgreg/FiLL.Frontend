@@ -276,7 +276,7 @@ const VehicleOperations = () => {
                     <Button variant="ghost" size="sm" className="h-8 px-3 py-2 border border-gray-300 rounded" onClick={handleOpenModal}>
                       Details
                     </Button>
-                    <Button variant="ghost" size="sm" className="h-8 w-10 px-1 py-2 border border-gray-300 rounded" onClick={() => alert('View on Chain button clicked!')} >
+                    <Button variant="ghost" size="sm" className="h-8 w-10 px-1 py-2 border border-gray-300 rounded" onClick={() => location.href='https://stellar.expert/explorer/testnet/tx/2433902132072448'} >
                       <img src={stellarIcon} alt="View on Chain" className="w-5 h-4 cursor-pointer" />
                     </Button>
                   </div>
