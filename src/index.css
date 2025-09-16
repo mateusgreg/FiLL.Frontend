@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Vehicle Dashboard Design System - Clean & Professional */
+
+@layer base {
+  :root {
+    --background: 250 10% 98%;
+    --foreground: 210 15% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 25%;
+
+    --primary: 210 40% 15%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 210 15% 25%;
+
+    --muted: 210 15% 95%;
+    --muted-foreground: 210 10% 55%;
+
+    --accent: 210 20% 96%;
+    --accent-foreground: 210 15% 25%;
+
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 15% 90%;
+    --input: 210 15% 90%;
+    --ring: 210 40% 15%;
+
+    --radius: 0.75rem;
+
+    /* Vehicle Transfer Modal Design System */
+    --progress-active: 220 91% 52%;
+    --progress-active-foreground: 0 0% 100%;
+    --progress-inactive: 220 13% 91%;
+    --progress-inactive-foreground: 215.4 16.3% 46.9%;
+    --progress-completed: 142 71% 45%;
+    --progress-completed-foreground: 0 0% 100%;
+    
+    --vehicle-border: 220 91% 52%;
+    --modal-shadow: 220 91% 52% / 0.1;
+
+    /* Status Colors */
+    --status-progress: 220 90% 56%;
+    --status-progress-bg: 220 90% 95%;
+    --status-success: 142 76% 36%;
+    --status-success-bg: 142 76% 95%;
+    --status-error: 0 84% 60%;
+    --status-error-bg: 0 84% 95%;
+
+    /* Metric Cards */
+    --metric-gradient: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(220 40% 20%) 100%);
+    --metric-shadow: 0 4px 12px -2px hsl(var(--primary) / 0.1);
+
+    /* Navigation */
+    --nav-bg: hsl(var(--primary));
+    --nav-foreground: hsl(var(--primary-foreground));
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 20% 8%;
+    --foreground: 210 20% 90%;
+
+    --card: 220 20% 10%;
+    --card-foreground: 210 20% 90%;
+
+    --popover: 220 20% 10%;
+    --popover-foreground: 210 20% 90%;
+
+    --primary: 210 20% 90%;
+    --primary-foreground: 220 20% 8%;
+
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 210 20% 90%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 210 10% 60%;
+
+    --accent: 220 15% 15%;
+    --accent-foreground: 210 20% 90%;
+
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 210 20% 90%;
+
+    /* Status Colors Dark */
+    --status-progress: 220 90% 65%;
+    --status-progress-bg: 220 90% 15%;
+    --status-success: 142 76% 45%;
+    --status-success-bg: 142 76% 15%;
+    --status-error: 0 84% 65%;
+    --status-error-bg: 0 84% 15%;
+
+    /* Navigation Dark */
+    --nav-bg: hsl(var(--primary));
+    --nav-foreground: hsl(var(--primary-foreground));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
