@@ -6,7 +6,8 @@ import Financiamento from "./Financiamento";
 import StatusBadge from "./StatusBadge";
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import VehicleTransferModal from "./VehicleTransferModal";
+import VehicleTransferModalSuccess from "./VehicleTransferModalSuccess";
+import VehicleTransferModalSuccess2 from "./VehicleTransferModalSuccess2";
 import carIcon from "../assets/car-icon.png";
 import stellarIcon from "../assets/stellar-icon.png";
 
@@ -34,40 +35,51 @@ const initialTransactions: Transaction[] = [
   },
   {
     id: "2", 
-    vehicleId: "CAR-8379",
+    vehicleId: "CAR-2357",
     status: "failed",
-    seller: { name: "Daiana Baldwin", avatar: "/avatar-woman.png" },
-    buyer: { name: "Fred Wu", avatar: "/avatar-man.webp" }
+    seller: { name: "Carolina Mars", avatar: "/avatar-woman.png" },
+    buyer: { name: "Daniel Clark", avatar: "/avatar-man.webp" }
   },
   {
     id: "3",
-    vehicleId: "CAR-8379", 
+    vehicleId: "CAR-0876", 
     status: "completed",
-    seller: { name: "Daiana Baldwin", avatar: "/avatar-woman.png" },
-    buyer: { name: "Fred Wu", avatar: "/avatar-man.webp" }
+    seller: { name: "Bryan Sharp", avatar: "/avatar-man.webp" },
+    buyer: { name: "Micaela Lins", avatar: "/avatar-woman.png" }
   },
   {
     id: "4",
-    vehicleId: "CAR-8379",
+    vehicleId: "CAR-5371",
     status: "completed", 
-    seller: { name: "Daiana Baldwin", avatar: "/avatar-woman.png" },
-    buyer: { name: "Fred Wu", avatar: "/avatar-man.webp" }
+    seller: { name: "Ana Sars", avatar: "/avatar-woman.png" },
+    buyer: { name: "Bob Sinclair", avatar: "/avatar-man.webp" }
   },
   {
     id: "5",
-    vehicleId: "CAR-8379",
+    vehicleId: "CAR-4965",
     status: "failed",
-    seller: { name: "Daiana Baldwin", avatar: "/avatar-woman.png" },
-    buyer: { name: "Fred Wu", avatar: "/avatar-man.webp" }
+    seller: { name: "Melissa Jones", avatar: "/avatar-woman.png" },
+    buyer: { name: "Steve Andrews", avatar: "/avatar-man.webp" }
   },
   {
     id: "6",
-    vehicleId: "CAR-8379",
+    vehicleId: "CAR-9063",
     status: "in-progress",
-    seller: { name: "Daiana Baldwin", avatar: "/avatar-woman.png" },
-    buyer: { name: "Fred Wu", avatar: "/avatar-man.webp" }
+    seller: { name: "Aline Shepard", avatar: "/avatar-woman.png" },
+    buyer: { name: "Oliver D.", avatar: "/avatar-man.webp" }
   }
 ];
+
+
+function refreshTransactionsList() {
+  initialTransactions.push({
+    id: "7",
+    vehicleId: "CAR-8362",
+    status: "in-progress",
+    seller: { name: "Marina Wins", avatar: "/avatar-woman.png" },
+    buyer: { name: "Carl Spencer", avatar: "/avatar-man.webp" }
+  });
+}
 
 const VehicleOperations = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -210,7 +222,7 @@ const VehicleOperations = () => {
             <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentColor"/>
             </svg>
             Refresh Transfers List
-          </Button>          
+          </Button>
         </div>
       </div>
 
@@ -276,13 +288,23 @@ const VehicleOperations = () => {
       </div>
 
       <div>
-        <VehicleTransferModal
+        <VehicleTransferModalSuccess
           isOpen={isModalOpen}
           onClose={handleCloseModal}
           title="Operation Details"
         >
           <p>Here are the details about the operation.</p>
-        </VehicleTransferModal>
+        </VehicleTransferModalSuccess>
+      </div>
+
+      <div>
+        <VehicleTransferModalSuccess2
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+          title="Operation Details"
+        >
+          <p>Here are the details about the operation.</p>
+        </VehicleTransferModalSuccess2>
       </div>
     </div>
   );

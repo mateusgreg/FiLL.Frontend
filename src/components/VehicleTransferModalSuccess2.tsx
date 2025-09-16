@@ -9,7 +9,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { CheckCircle2, Circle, Clock } from 'lucide-react';
 import vehicleImage from '@/assets/car.png';
 
-interface VehicleTransferModalProps {
+interface VehicleTransferModalSuccess2Props {
   isOpen: boolean;
   onClose: () => void;
   title: string;
@@ -131,7 +131,7 @@ const ProgressStep: React.FC<{ step: TransferStep; isLast: boolean }> = ({
           {step.title}
         </h3>
         <p className="text-sm text-muted-foreground leading-relaxed">
-          {step.description} {step.id == '3' && (<a href='#' className='underline'>View on Stellar Expert</a>)}
+          {step.description} {step.id == '3' && (<a href='https://stellar.expert/explorer/testnet/tx/2438295883616256' target="_blank" className='underline'>View on Stellar Expert</a>)}
         </p>
         <p>
           <span className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
@@ -144,7 +144,7 @@ const ProgressStep: React.FC<{ step: TransferStep; isLast: boolean }> = ({
   );
 };
 
-export const VehicleTransferModal: React.FC<VehicleTransferModalProps> = ({
+export const VehicleTransferModalSuccess2: React.FC<VehicleTransferModalSuccess2Props> = ({
   isOpen,
   onClose,
 }) => {
@@ -221,4 +221,4 @@ export const VehicleTransferModal: React.FC<VehicleTransferModalProps> = ({
   );
 };
 
-export default VehicleTransferModal;
+export default VehicleTransferModalSuccess2;
