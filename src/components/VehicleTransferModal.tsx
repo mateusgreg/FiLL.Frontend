@@ -20,6 +20,7 @@ interface TransferStep {
   id: string;
   title: string;
   description: string;
+  timestamp?: string;
   status: 'completed' | 'active' | 'pending';
 }
 
@@ -34,12 +35,14 @@ const transferSteps: TransferStep[] = [
     id: '1',
     title: 'Financing Contract Approving',
     description: 'The seller sign with the bank institution.',
+    timestamp: '2025-09-15T10:00:00Z',
     status: 'completed',
   },
   {
     id: '2',
     title: 'Sale Communication',
     description: 'The seller and buyer formalize the sale communication.',
+    timestamp: '2025-09-15T14:30:00Z',
     status: 'completed',
   },
   {
@@ -130,6 +133,12 @@ const ProgressStep: React.FC<{ step: TransferStep; isLast: boolean }> = ({
         <p className="text-sm text-muted-foreground leading-relaxed">
           {step.description}
         </p>
+        <p>
+          <span className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
+            <Clock className="h-3 w-3" />
+            {step.timestamp != null ? new Date(step.timestamp).toLocaleString(): 'Pending...'}
+          </span>
+        </p>
       </div>
     </div>
   );
@@ -150,12 +159,12 @@ export const VehicleTransferModal: React.FC<VehicleTransferModalProps> = ({
 
         <div className="px-6">
           {/* Vehicle Image Section */}
-          <div className="relative mb-6 flex justify-center items-center">
+          <div className="relative flex justify-center items-center">
             <div>
               <img
                 src={vehicleImage}
                 alt="Mitsubishi Lancer Evolution 2014"
-                className="w-60 h-60 object-contain"
+                className="w-80 h-80 object-contain"
               />
             </div>
           </div>
